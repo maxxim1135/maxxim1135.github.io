@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .account-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .input-field {
+      padding: 12px;
+      width: 200px;
+      font-size: 14px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+    .click-button {
+      padding: 12px;
+      width: 202px;
+    }
+  </style>
+</head>
+<body class="main_body">
+  <nav class="navbar">
+    <div class="navbar-section">
+      <a class="navbar-link" href="index.html">Home</a>
+    </div>
+    <div class="navbar-section">
+      <a class="navbar-link" href="orders.html">My orders</a>
+    </div>
+    <div class="navbar-section">
+      <a class="navbar-link" href="account.html">Account</a>
+    </div>
+    <div class="navbar-section">
+      <a class="navbar-link" href="help.html">Help</a>
+    </div>
+    <div class="navbar-section">
+      <a class="navbar-link" href="auth.html">Logout</a>
+    </div>
+  </nav>
+
+  <div class="main-center-box">
+    <h1 class="main-h1">Account Information</h1>
+    <form class="account-form" action="account.html">
+      <label>
+        <input type="text" name="username" placeholder="Username" class="input-field">
+      </label>
+      <label>
+        <input type="email" name="email" placeholder="Email" class="input-field">
+      </label>
+      <label>
+        <input type="text" name="firstname" placeholder="First Name" class="input-field">
+      </label>
+      <label>
+        <input type="text" name="lastname" placeholder="Last Name" class="input-field">
+      </label>
+      <label>
+        <input type="text" name="phone" placeholder="Phone" class="input-field">
+      </label>
+      <label>
+        <input type="date" name="date_of_birth" placeholder="Date of Birth" class="input-field">
+      </label>
+      <button class="click-button" type="submit">Update Information</button>
+    </form>
+  </div>
+</body>
+</html>

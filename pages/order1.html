@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order #1234 Details</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .main-center-box {
+            justify-content: flex-start;
+            padding-top: 80px;
+        }
+        .details-grid {
+            display: flex;
+            gap: 5px;
+            position: relative;
+        }
+        .fixed-image {
+            flex: 1;
+            border: 1px solid;
+            margin-right: 10px;
+            max-width: 45%;
+            max-height: 45%;
+        }
+        .table-container {
+            flex: 1;
+        }
+        .click-button {
+            bottom: 15%;
+            position: fixed;
+        }
+        table {
+            margin-right: 10px;
+        }
+        td {
+            padding: 2px;
+        }
+    </style>
+</head>
+<body class="main_body">
+    <nav class="navbar">
+        <div class="navbar-section">
+            <a class="navbar-link" href="index.html">Home</a>
+        </div>
+        <div class="navbar-section">
+            <a class="navbar-link" href="orders.html">My orders</a>
+        </div>
+        <div class="navbar-section">
+            <a class="navbar-link" href="account.html">Account</a>
+        </div>
+        <div class="navbar-section">
+            <a class="navbar-link" href="help.html">Help</a>
+        </div>
+        <div class="navbar-section">
+            <a class="navbar-link" href="auth.html">Logout</a>
+        </div>
+    </nav>
+    <div class="main-center-box">
+        <h2 class="main-h2">Order #1234</h2>
+        <div class="details-grid">
+            <img class="fixed-image" src="/resources/img.png" alt="Audience Image">
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <td><strong>Name:</strong></td>
+                        <td>Auditorium Rental</td>
+                        <td><strong>Booking date:</strong></td>
+                        <td>01/01/2023</td>
+                    </tr>
+                    <tr>
+                        <td><strong>City:</strong></td>
+                        <td>New York</td>
+                        <td><strong>From:</strong></td>
+                        <td>01/01/2023</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Address:</strong></td>
+                        <td>Street, 32/4</td>
+                        <td><strong>To:</strong></td>
+                        <td>01/01/2023</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Capacity:</strong></td>
+                        <td>500 people</td>
+                        <td><strong>Price:</strong></td>
+                        <td>$500</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <a href="orders.html" class="click-button">Back to Orders</a>
+    </div>
+</body>
+</html>
