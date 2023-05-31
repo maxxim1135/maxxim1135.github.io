@@ -5,120 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search Results</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <style>
-    .results-grid {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-height: calc(100vh - 100px);
-      overflow-y: auto;
-      padding: 20px;
-      gap: 15px;
-      width: 80%;
-      height: 83%;
-      margin-top: 30px;
-    }
-    .result-card {
-      display: flex;
-      width: 90%;
-      border-bottom: 1px solid #303841;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 8px;
-      max-height: 400px;
-      padding: 3px;
-    }
-    .result-card-description {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-    .result-card-description img {
-      align-self: center;
-      border: 1px solid #303841;
-      max-width: 60%;
-      max-height: 200px;
-    }
-    .result-card-description-info {
-      display: flex;
-      flex-direction: column;
-      margin-left: 0;
-    }
-    .result-card-description-info-tb {
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-    }
-    .result-card-description-info-tb td {
-      word-wrap: break-word;
-      padding-left: 0;
-      white-space: normal;
-    }
-    .result-card-description-info-tb-name {
-      align-self: center;
-      padding-left: 0;
-    }
-    .book-button {
-      margin-top: 10px;
-      align-self: center;
-      height: 10%;
-      width: 50%;
-    }
-    @media screen and (min-width: 1000px) {
-      .result-card {
-        width: 90%;
-        border: 1px solid #303841;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-      .result-card-description {
-        flex-direction: row;
-      }
-      .result-card-description-info {
-        width: 50%;
-        margin-left: 10px;
-      }
-      .result-card-description-info-tb {
-        justify-content: space-between;
-        display: table;
-      }
-      .result-card-description-info-tb td {
-        padding-left: 5px;
-      }
-      .result-card-description-info-tb-name {
-        align-self: normal;
-        padding-left: 6px;
-      }
-      .result-card-description img {
-        width: 30%;
-        margin-left: 0;
-      }
-      .book-button {
-        align-self: flex-end;
-        height: 9%;
-        width: 10%;
-        margin-bottom: 6.5%;
-        margin-right: 5px;
-        font-size: 14px;
-      }
-    }
-
-  </style>
 </head>
 <body class="main_body">
 <nav class="navbar">
   <div class="navbar-section">
-    <a class="navbar-link" href="index.html">Home</a>
+    <a class="navbar-link" href="../pages/index.html">Home</a>
   </div>
   <div class="navbar-section">
-    <a class="navbar-link" href="orders.html">My orders</a>
+    <a class="navbar-link" href="../pages/orders.html">My orders</a>
   </div>
   <div class="navbar-section">
-    <a class="navbar-link" href="account.html">Account</a>
+    <a class="navbar-link" href="../pages/account.html">Account</a>
   </div>
   <div class="navbar-section">
-    <a class="navbar-link" href="auth.html">Logout</a>
+    <a class="navbar-link" href="../pages/auth.html">Logout</a>
   </div>
 </nav>
 
@@ -150,7 +50,7 @@
         </table>
       </div>
     </div>
-    <a href="/errors/404.html" class="click-button book-button">Book Now</a>
+    <a href="../errors/404.html" class="click-button result-card-book-button">Book Now</a>
   </div>
   <div class="result-card">
     <div class="result-card-description">
@@ -179,7 +79,7 @@
         </table>
       </div>
     </div>
-    <a href="/errors/404.html" class="click-button book-button">Book Now</a>
+    <a href="../errors/404.html" class="click-button result-card-book-button">Book Now</a>
   </div>
   <div class="result-card">
     <div class="result-card-description">
@@ -208,7 +108,7 @@
         </table>
       </div>
     </div>
-    <a href="index.html" class="click-button book-button">Book Now</a>
+    <a href="../pages/index.html" class="click-button result-card-book-button">Book Now</a>
   </div>
   <div class="result-card">
     <div class="result-card-description">
@@ -237,7 +137,7 @@
         </table>
       </div>
     </div>
-    <a href="index.html" class="click-button book-button">Book Now</a>
+    <a href="../errors/404.html" class="click-button result-card-book-button">Book Now</a>
   </div>
 </div>
 <footer class="site-footer">

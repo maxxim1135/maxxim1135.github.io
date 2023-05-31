@@ -10,39 +10,14 @@
             justify-content: flex-start;
             padding-top: 80px;
         }
-        .details-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            position: relative;
-        }
-        .fixed-image {
-            flex: 1;
-            align-self: center;
-            border: 1px solid;
-            margin-right: 10px;
-            max-width: 50%;
-            max-height: 50%;
-        }
-        .table-container {
-            flex: 1;
-        }
         .click-button {
             bottom: 15%;
-            position: fixed;
-        }
-        table {
-            margin-right: 10px;
-        }
-        td {
-            padding: 2px;
+            margin-top: 100px;
+            position: relative;
         }
         @media screen and (min-width: 1100px) {
-            .details-grid {
-                flex-direction: row;
-            }
-            .fixed-image {
-                align-self: normal;
+            .click-button {
+                margin-top: 0;
             }
         }
     </style>
@@ -50,23 +25,23 @@
 <body class="main_body">
     <nav class="navbar">
         <div class="navbar-section">
-            <a class="navbar-link" href="index.html">Home</a>
+            <a class="navbar-link" href="../pages/index.html">Home</a>
         </div>
         <div class="navbar-section">
-            <a class="navbar-link" href="orders.html">My orders</a>
+            <a class="navbar-link" href="../pages/orders.html">My orders</a>
         </div>
         <div class="navbar-section">
-            <a class="navbar-link" href="account.html">Account</a>
+            <a class="navbar-link" href="../pages/account.html">Account</a>
         </div>
         <div class="navbar-section">
-            <a class="navbar-link" href="auth.html">Logout</a>
+            <a class="navbar-link" href="../pages/auth.html">Logout</a>
         </div>
     </nav>
     <div class="main-center-box">
         <h2 class="main-h2">Order #1234</h2>
-        <div class="details-grid">
-            <img class="fixed-image" src="/resources/img.png" alt="Audience Image">
-            <div class="table-container">
+        <div class="orders-details-grid">
+            <img class="orders-fixed-image" src="../resources/img.png" alt="Audience Image">
+            <div class="orders-details-container">
                 <table>
                     <tr>
                         <td><strong>Name:</strong></td>
@@ -95,7 +70,7 @@
                 </table>
             </div>
         </div>
-        <a href="orders.html" class="click-button">Back to Orders</a>
+        <a href="../pages/orders.html" class="click-button">Back to Orders</a>
     </div>
     <footer class="site-footer">
         <div class="footer-container">
