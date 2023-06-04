@@ -1,0 +1,548 @@
+@import "variables";
+
+@mixin mxn-button ($_width: 300px){
+  background-color: $fourth-color;
+  color: $back-color;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border: 2px solid $first-color;
+  border-radius: 4px;
+  width: $_width;
+  &:hover {
+    background-color: $second-color;
+    border-radius: 10px;
+  }
+}
+@mixin mxn-center-box($_margin: 20vh 0 20vh 0, $_justify_content: center) {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: $_justify_content;
+  align-self: center;
+
+  margin: $_margin;
+}
+
+
+.main_body {
+  background-color: $back-color;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  margin: 0;
+}
+
+.click-button {
+  @include mxn-button;
+}
+
+
+/*------------MAIN BOX---------------*/
+.main-center-box {
+  @include mxn-center-box($_margin: 20vh 0 25vh 0);
+}
+.main-h1 {
+  -webkit-text-emphasis-color: $text-emphasis;
+  margin-bottom: 10px;
+}
+.main-p {
+  -webkit-text-emphasis-color: $text-emphasis;
+  margin-bottom: 30px;
+}
+
+
+/*----------------AUTH-----------------*/
+.auth-main-box {
+  @include mxn-center-box($_margin: 40vh 4vh 0 4vh);
+}
+
+.auth-buttons-container {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+.auth-click-button {
+  @include mxn-button(30vh);
+}
+@media screen and (min-width: 550px){
+  .auth-buttons-container {
+    flex-direction: row;
+    width: 80%;
+  }
+}
+
+/*-------------LOGIN FORM--------------*/
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.login-form input {
+  padding: 12px;
+  width: 40vh;
+  font-size: 14px;
+  border: 2px solid $first-color;
+  border-radius: 4px;
+}
+.login-click-button {
+  @include mxn-button(40vh);
+}
+
+/*-------------REGISTRATION FORM--------------*/
+.register-main-box {
+  @include mxn-center-box($_margin: 10vh 0 0 0);
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 200px;
+  margin-bottom: 15px;
+}
+.register-form input {
+  padding: 12px;
+  width: 40vh;
+  font-size: 14px;
+  border: 2px solid $first-color;
+  border-radius: 4px;
+}
+.register-form-input-icon {
+  height: 16px;
+  width: 16px;
+  margin-left: 8px;
+}
+
+
+
+/*------------NAVIGATION BAR----------------*/
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: $third-color;
+  -webkit-text-emphasis-color: $text-emphasis;
+  padding: 10px 0;
+  z-index: 100;
+  border-bottom: 2px solid $second-color;
+}
+.navbar-section {
+
+}
+.navbar-link {
+  color: $fourth-color;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+  padding: 3px 10px;
+}
+.navbar-link:hover {
+  background-color: $second-color;
+  border-radius: 100px;
+  padding: 5px;
+}
+
+
+
+
+/*------------TOOLTIP--------------*/
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  width: 70px;
+  color: $back-color;
+  font-size: 12px;
+  background-color: $third-color;
+  border-radius: 10px;
+  padding: 5px 6px 6px 6px;
+}
+.input-icon:hover + .tooltip {
+  visibility: visible;
+}
+
+
+
+
+/*-----------SEARCH AUDIENCE part of index.html ----------*/
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.input-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.input-field, .select-field {
+  padding: 8px;
+  font-size: 14px;
+  border: 2px solid $first-color;
+  border-radius: 4px;
+  width: 300px;
+}
+.select-field {
+  padding: 8px;
+  width: 100%;
+  font-size: 14px;
+  border: 2px solid $first-color;
+  border-radius: 4px;
+}
+
+
+
+
+/*--------------RESULT CARD---------------*/
+.results-grid {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+  width: 80%;
+  height: 83%;
+  margin-top: 30px;
+}
+
+.result-card {
+  display: flex;
+  width: 90%;
+  border-bottom: 1px solid $third-color;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+  max-height: 400px;
+  padding: 3px;
+
+  &:hover {
+    border: 1px ridge $third-color;
+    background-color: #ffffff;
+  }
+
+  &-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    img {
+      align-self: center;
+      border: 1px solid $third-color;
+      max-width: 60%;
+      max-height: 200px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+
+      &-tb {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+
+        td {
+          word-wrap: break-word;
+          padding-left: 0;
+          white-space: normal;
+        }
+
+        &-name {
+          align-self: center;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &-book-button {
+      @include mxn-button(100px);
+      align-self: center;
+      height: 10%;
+    }
+  }
+}
+@media screen and (min-width: 1100px) {
+  .result-card {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-description {
+      flex-direction: row;
+
+      &-info {
+        width: 50%;
+        margin-left: 10px;
+
+        &-tb {
+          justify-content: space-between;
+          display: table;
+
+          td {
+            padding-left: 5px;
+          }
+
+          &-name {
+            align-self: normal;
+            padding-left: 6px;
+          }
+        }
+
+        img {
+          width: 30%;
+          margin-left: 0;
+        }
+      }
+      &-book-button {
+        align-self: center;
+        margin-left: 10%;
+      }
+    }
+  }
+}
+
+
+
+
+/*------------- ORDERS ---------------*/
+
+.orders-main-box {
+  @include mxn-center-box($_margin: 18vh 0 20vh 0);
+  width: 60%;
+}
+.orders-container {
+  width: 100%;
+  height: 70vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
+.responsive-table {
+  overflow-y: auto;
+  width: 100%;
+  max-height: 90%;
+  li {
+    border-radius: 3px 0 0 3px;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 15%;
+  }
+  .col-2 {
+    flex-basis: 18%;
+  }
+  .col-3 {
+    flex-basis: 20%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  .col-5 {
+    flex-basis: 10%;
+  }
+
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+
+    }
+    li {
+      display: block;
+    }
+    .col {
+      flex-basis: 100%;
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: $second-color;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
+
+/*------------- ORDERS DETAILS --------*/
+.orders-details-main-box {
+  @include mxn-center-box($_margin: 20vh 0 30vh 0, $_justify-content: flex-start);
+}
+.orders-details-grid {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  gap: 5px;
+  position: relative;
+}
+.orders-fixed-image {
+  flex: 1;
+  border: 1px solid;
+  width: 50vh;
+
+}
+.orders-details-container {
+  flex: 1;
+}
+.orders-details-container table {
+  margin-right: 10px;
+}
+.orders-details-container td {
+  padding: 2px;
+}
+.orders-details-click-button {
+  @include mxn-button(40%);
+  bottom: 15%;
+  margin-top: 5vh;
+  position: relative;
+}
+@media screen and (min-width: 1100px) {
+  .orders-details-grid {
+    flex-direction: row;
+  }
+  .orders-fixed-image {
+    align-self: normal;
+    width: 45%;
+  }
+  .orders-details-click-button {
+    width: 20%;
+  }
+}
+
+
+
+
+/*-----------------ACCOUNT--------------*/
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.account-form-input-field {
+  padding: 12px;
+  width: 200px;
+  font-size: 14px;
+  border: 2px solid $first-color;
+  border-radius: 4px;
+}
+.account-click-button {
+  @include mxn-button(98%);
+}
+
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  flex-shrink: 0;
+  align-self: baseline;
+  height: 150px; /* Adjust this value based on how much of the footer you want to be initially visible */
+  padding: 30px;
+  margin-top: auto;
+  overflow: hidden;
+  background-color: $third-color;
+  color: $back-color;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.footer-container {
+  max-width: 80%;
+  margin: auto;
+}
+.footer-section h4 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.footer-section p {
+  margin: 0;
+}
+.footer-section a {
+  color: $back-color;
+  text-decoration: none;
+}
+
+
+
+
+/*------------MAIN SCROLL BAR------------*/
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+/*------------DIV SCROLL BAR------------*/
+/* width */
+div ul::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+div ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+div ul::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+div ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+/* ----------------CUSTOM ERRORS-------------*/
+.custom-error-message {
+  text-align: center;
+  color: #303841;
+  flex-grow: 1;
+  padding-top: 250px;
+  padding-bottom: 300px;
+}

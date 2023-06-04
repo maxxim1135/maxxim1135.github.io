@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Orders</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body class="main_body">
   <nav class="navbar">
@@ -21,77 +21,68 @@
       <a class="navbar-link" href="../pages/auth.html">Logout</a>
     </div>
   </nav>
-
-  <div class="main-center-box">
-    <h1 class="main-h1">My Orders</h1>
-    <div class="orders-table-container">
-      <table class="orders-table">
-        <thead>
-        <tr>
-          <th>Order ID</th>
-          <th>Product</th>
-          <th>Date</th>
-          <th>Total Cost</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td><a href="../pages/order1.html" class="order-link">#1234</a></td>
-          <td>Auditorium Rental</td>
-          <td>01/01/2023</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td><a href="../pages/order1.html" class="order-link">#1234</a></td>
-          <td>Auditorium Rental</td>
-          <td>01/01/2023</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td><a href="../pages/order1.html" class="order-link">#1234</a></td>
-          <td>Auditorium Rental</td>
-          <td>01/01/2023</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td><a href="../pages/order1.html" class="order-link">#1234</a></td>
-          <td>Auditorium Rental</td>
-          <td>01/01/2023</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td><a href="../pages/order1.html" class="order-link">#1234</a></td>
-          <td>Auditorium Rental</td>
-          <td>01/01/2023</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td><a href="../pages/order1.html" class="order-link">#1234</a></td>
-          <td>Auditorium Rental</td>
-          <td>01/01/2023</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td><a href="../pages/order1.html" class="order-link">#1234</a></td>
-          <td>Auditorium Rental</td>
-          <td>01/01/2023</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td><a href="../pages/order1.html" class="order-link">#1234</a></td>
-          <td>Auditorium Rental</td>
-          <td>01/01/2023</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td><a href="../pages/order1.html" class="order-link">#1234</a></td>
-          <td>Auditorium Rental</td>
-          <td>01/01/2023</td>
-          <td>$500</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="orders-main-box">
+  <div class="orders-container">
+    <h2>My orders</h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">ID</div>
+        <div class="col col-2">Date</div>
+        <div class="col col-3">City</div>
+        <div class="col col-4">Address</div>
+        <div class="col col-5">Status</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="ID"><a href="order1.html">42235</a></div>
+        <div class="col col-2" data-label="Date">2023/02/02</div>
+        <div class="col col-3" data-label="City">Lviv</div>
+        <div class="col col-4" data-label="Address">vcdadasa</div>
+        <div class="col col-5" data-label="Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="ID"><a href="order1.html">42235</a></div>
+        <div class="col col-2" data-label="Date">2023/02/02</div>
+        <div class="col col-3" data-label="City">Lviv</div>
+        <div class="col col-4" data-label="Address">vcdadasa</div>
+        <div class="col col-5" data-label="Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="ID"><a href="order1.html">42235</a></div>
+        <div class="col col-2" data-label="Date">2023/02/02</div>
+        <div class="col col-3" data-label="City">Lviv</div>
+        <div class="col col-4" data-label="Address">vcdadasa</div>
+        <div class="col col-5" data-label="Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="ID"><a href="order1.html">42235</a></div>
+        <div class="col col-2" data-label="Date">2023/02/02</div>
+        <div class="col col-3" data-label="City">Lviv</div>
+        <div class="col col-4" data-label="Address">vcdadasa</div>
+        <div class="col col-5" data-label="Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="ID"><a href="order1.html">42235</a></div>
+        <div class="col col-2" data-label="Date">2023/02/02</div>
+        <div class="col col-3" data-label="City">Lviv</div>
+        <div class="col col-4" data-label="Address">vcdadasa</div>
+        <div class="col col-5" data-label="Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="ID"><a href="order1.html">42235</a></div>
+        <div class="col col-2" data-label="Date">2023/02/02</div>
+        <div class="col col-3" data-label="City">Lviv</div>
+        <div class="col col-4" data-label="Address">vcdadasa</div>
+        <div class="col col-5" data-label="Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="ID"><a href="order1.html">42235</a></div>
+        <div class="col col-2" data-label="Date">2023/02/02</div>
+        <div class="col col-3" data-label="City">Lviv</div>
+        <div class="col col-4" data-label="Address">vcdadasa</div>
+        <div class="col col-5" data-label="Status">Pending</div>
+      </li>
+    </ul>
+  </div>
   </div>
   <footer class="site-footer">
     <div class="footer-container">

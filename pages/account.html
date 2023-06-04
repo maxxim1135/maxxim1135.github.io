@@ -4,13 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Account</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <style>
-    .click-button {
-      padding: 12px;
-      width: 98%;
-    }
-  </style>
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body class="main_body">
   <nav class="navbar">
@@ -37,6 +31,9 @@
         <input type="email" name="email" placeholder="Email" class="account-form-input-field">
       </label>
       <label>
+        <input type="password" name="password" placeholder="Password" class="account-form-input-field">
+      </label>
+      <label>
         <input type="text" name="firstname" placeholder="First Name" class="account-form-input-field">
       </label>
       <label>
@@ -48,8 +45,8 @@
       <label>
         <input type="date" name="date_of_birth" placeholder="Date of Birth" class="account-form-input-field">
       </label>
-      <button class="click-button" type="submit">Update Information</button>
-      <button class="click-button" type="submit">Delete Account</button>
+      <button class="account-click-button" type="submit">Update Information</button>
+      <button class="account-click-button" type="submit">Delete Account</button>
     </form>
   </div>
   <footer class="site-footer">
